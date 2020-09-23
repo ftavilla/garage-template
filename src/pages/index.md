@@ -5,12 +5,10 @@ image: /img/bg_2.jpg
 heading: Nous prenons soins de votre voiture
 subheading: Nous prenons soins de votre voiture
 mainpitch:
-  title: Why Kaldi
+  title: Bienvenue chez Autorepair.
+  subtitle: Cela fait plus de 20 ans que nous aidons nos clients.
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tellus lacus, aliquet in purus vitae, cursus facilisis quam. Curabitur rutrum, elit a bibendum iaculis, massa ante porttitor velit, sit amet suscipit nulla libero quis purus. Donec eget faucibus justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris suscipit feugiat aliquet. Donec pharetra nisi et risus condimentum, non ornare massa laoreet. Pellentesque hendrerit urna ipsum, pretium rhoncus ex egestas sed. Maecenas tempor, augue scelerisque dapibus faucibus, libero justo ornare sapien, non mattis ligula lacus eu mi. Sed placerat et magna vel consequat. Etiam faucibus, odio id laoreet iaculis, enim mi tincidunt quam, ac posuere orci quam eu mi. Nulla ultricies enim et risus imperdiet, in tincidunt ipsum tristique. Aliquam vel tincidunt nisl, ac volutpat nunc.
 description: >-
   Nos services
 intro:
