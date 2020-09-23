@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Link, graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import Contact from "../pages/contact/file-upload"
 
 export const IndexPageTemplate = ({
                                       image,
@@ -153,21 +152,22 @@ export const IndexPageTemplate = ({
 
                                             }}>Nos consultations sont gratuites !</h2>
                                         </span>
-                                    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-                                        <input type="hidden" name="bot-field" />
-                                        <input type="hidden" name="form-name" value="contact" />
+                                    <form name="contact" method="post" data-netlify="true"
+                                          data-netlify-honeypot="bot-field">
+                                        <input type="hidden" name="bot-field"/>
+                                        <input type="hidden" name="form-name" value="contact"/>
 
                                         <div className="field">
                                             <label className="label">Nom</label>
                                             <div className="control">
-                                                <input className="input" type="text" placeholder="Nom"/>
+                                                <input className="input" type="text" name="nom" placeholder="Nom"/>
                                             </div>
                                         </div>
 
                                         <div className="field">
                                             <label className="label">Email</label>
                                             <div className="control">
-                                                <input className="input" type="email" placeholder="Email"
+                                                <input className="input" type="email" name="email" placeholder="Email"
                                                 />
                                             </div>
                                         </div>
@@ -175,21 +175,26 @@ export const IndexPageTemplate = ({
                                         <div className="field">
                                             <label className="label">Téléphone</label>
                                             <div className="control">
-                                                <input className="input" type="text" placeholder="Téléphone"/>
+                                                <input className="input" type="text" name="tel"
+                                                       placeholder="Téléphone"/>
                                             </div>
                                         </div>
 
                                         <div className="field">
                                             <label className="label">Message</label>
                                             <div className="control">
-                                                <textarea className="textarea" placeholder="Message"></textarea>
+                                                <textarea className="textarea" name="message"
+                                                          placeholder="Message"/>
                                             </div>
                                         </div>
 
-                                        <div className="field is-grouped">
-                                            <div className="control">
-                                                <button className="button is-link">Envoyer</button>
-                                            </div>
+                                        <div className="field">
+                                            <input className="btn btn-primary" type="submit" style={{
+                                                background: '#f79f24',
+                                                borderShadow: 'none',
+                                                color: '#fff',
+                                                cursor: 'pointer'
+                                            }} value="Envoyer"/>
                                         </div>
                                     </form>
                                 </div>
