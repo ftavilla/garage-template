@@ -73,37 +73,35 @@ export const IndexPageTemplate = ({
                 }}>Prenez rendez-vous maintenant</a></p>
             </div>
         </div>
-        <nav className="level is-mobile" style={{backgroundColor: "#000000", color: "white", paddingTop: '50px', paddingBottom: '50px'}}>
-            <div className="level-item has-text-centered">
-                <div>
-                    <p className="heading">Années d'expériences</p>
-                    <p className="title" style={{ color: "#f79f24"}}>22</p>
-                </div>
+        <div className="columns is-gapless" style={{
+            backgroundColor: "#000000",
+            color: "white",
+            paddingTop: '50px',
+            paddingBottom: '50px',
+            textAlign: 'center'
+        }}>
+            <div className="column">
+                <p className="heading">Années d'expériences</p>
+                <p className="title" style={{color: "#f79f24"}}>22</p>
             </div>
-            <div className="level-item has-text-centered">
-                <div>
-                    <p className="heading">Projets finis</p>
-                    <p className="title" style={{ color: "#f79f24"}}>4200</p>
-                </div>
+            <div className="column">
+                <p className="heading">Projets finis</p>
+                <p className="title" style={{color: "#f79f24"}}>4200</p>
             </div>
-            <div className="level-item has-text-centered">
-                <div>
-                    <p className="heading">Clients satisfait</p>
-                    <p className="title" style={{ color: "#f79f24"}}>2348</p>
-                </div>
+            <div className="column">
+                <p className="heading">Clients satisfait</p>
+                <p className="title" style={{color: "#f79f24"}}>2348</p>
             </div>
-            <div className="level-item has-text-centered">
-                <div>
-                    <p className="heading">Voitures vendus</p>
-                    <p className="title" style={{ color: "#f79f24"}}>3209</p>
-                </div>
+            <div className="column">
+                <p className="heading">Voitures vendus</p>
+                <p className="title" style={{color: "#f79f24"}}>3209</p>
             </div>
-        </nav>
+        </div>
         <section className="section section--gradient">
             <div className="container">
                 <div className="section">
                     <div className="columns">
-                        <div className="column is-10 is-offset-1">
+                        <div className="column">
                             <div className="content">
                                 <div className="content">
                                     <div className="columns is-gapless">
@@ -114,15 +112,27 @@ export const IndexPageTemplate = ({
                                             </figure>
                                         </div>
                                         <div className="column">
-                                            <h1 className="title">{mainpitch.title}</h1>
-                                            <h1 className="title">{mainpitch.subtitle}</h1>
+                                            <h1 className="title" style={{
+                                                fontSize: '12px',
+                                                display: 'block',
+                                                fontWeight: 700,
+                                                color: '#f79f24',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '2px',
+                                                textAlign: 'center'
+                                            }}>{mainpitch.title}</h1>
+
+                                            <h2 className="title" style={{
+                                                fontSize: '24px',
+                                                fontWeight: 700,
+                                            }}>{mainpitch.subtitle}</h2>
                                             <p>
                                                 {mainpitch.description}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="columns">
+                                <div className="columns" style={{marginTop: '20px'}}>
                                     <div className="column is-12">
                                         <span style={{
                                             fontSize: '12px',
@@ -158,7 +168,7 @@ export const IndexPageTemplate = ({
                                     </div>
                                 </div>
                                 <div className="column is-12">
-                                    <div className="columns is-gapless">
+                                    <div className="columns is-gapless" style={{marginTop: '30px'}}>
                                         <div className="column">
                                             <span style={{
                                                 fontSize: '12px',
@@ -186,7 +196,7 @@ export const IndexPageTemplate = ({
                                         <div className="column">
                                             <form name="contact" action="/contact/thanks" method="post"
                                                   data-netlify="true"
-                                                  data-netlify-honeypot="bot-field">
+                                                  data-netlify-honeypot="bot-field" style={{padding: '20px'}}>
                                                 <input type="hidden" name="bot-field"/>
                                                 <input type="hidden" name="form-name" value="contact"/>
 
@@ -238,7 +248,7 @@ export const IndexPageTemplate = ({
                                 </div>
                                 <div className="column is-12">
                                     <h3 className="has-text-weight-semibold is-size-2">
-                                        News
+                                        Nos véhicules à vendre
                                     </h3>
                                     <BlogRoll/>
                                     <div className="column is-12 has-text-centered">
@@ -259,7 +269,6 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     title: PropTypes.string,
-    subtitle: PropTypes.string,
     heading: PropTypes.string,
     subheading: PropTypes.string,
     mainpitch: PropTypes.object,
@@ -277,7 +286,6 @@ const IndexPage = ({data}) => {
             <IndexPageTemplate
                 image={frontmatter.image}
                 title={frontmatter.title}
-                subtitle={frontmatter.subtitle}
                 heading={frontmatter.heading}
                 subheading={frontmatter.subheading}
                 mainpitch={frontmatter.mainpitch}
@@ -314,6 +322,7 @@ export const pageQuery = graphql`
                 subheading
                 mainpitch {
                     title
+                    subtitle
                     description
                 }
                 description

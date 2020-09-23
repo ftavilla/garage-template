@@ -1,15 +1,17 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import github from '../img/github-icon.svg'
+import facebook from "../img/social/facebook.svg"
+import twitter from "../img/social/twitter.svg"
+import instagram from "../img/social/instagram.svg"
 
 const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
+    constructor(props) {
+        super(props)
+        this.state = {
+            active: false,
+            navBarActiveClass: '',
+        }
     }
-  }
 
   toggleHamburger = () => {
     // toggle the active boolean in the state
@@ -59,34 +61,43 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
+                <Link className="navbar-item" to="/about">
+                    Qui sommes-nous ?
+                </Link>
+                <Link className="navbar-item" to="/products">
+                    Nos services
+                </Link>
+                <Link className="navbar-item" to="/blog">
+                    Nos véhicules
+                </Link>
+                <Link className="navbar-item" to="/contact">
+                    Nous contacter
+                </Link>
             </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
+              <div className="navbar-end has-text-centered">
+                  <a title="facebook" className="navbar-item" href="https://facebook.com">
+                      <img
+                          src={facebook}
+                          alt="Facebook"
+                          style={{width: '1em', height: '1em'}}
+                      />
+                  </a>
+                  <a title="twitter" className="navbar-item" href="https://twitter.com">
+                      <img
+                          className="fas fa-lg"
+                          src={twitter}
+                          alt="Twitter"
+                          style={{width: '1em', height: '1em'}}
+                      />
+                  </a>
+                  <a title="instagram" className="navbar-item" href="https://instagram.com">
+                      <img
+                          src={instagram}
+                          alt="Instagram"
+                          style={{width: '1em', height: '1em'}}
+                      />
+                  </a>
+              </div>
           </div>
         </div>
       </nav>

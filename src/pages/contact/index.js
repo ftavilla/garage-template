@@ -1,6 +1,7 @@
 import React from 'react'
-import { navigate } from 'gatsby-link'
+import {navigate} from 'gatsby-link'
 import Layout from '../../components/Layout'
+import GoogleMapReact from 'google-map-react';
 
 function encode(data) {
   return Object.keys(data)
@@ -38,15 +39,22 @@ export default class Index extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
+            <div style={{height: '50vh', width: '50%'}}>
+              <GoogleMapReact
+                  defaultCenter={[34.0522, -118.2437]}
+                  defaultZoom={10}
+              >
+              </GoogleMapReact>
+            </div>
             <div className="content">
               <h1>Contact</h1>
               <form
-                name="contact"
-                method="post"
-                action="/contact/thanks/"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={this.handleSubmit}
+                  name="contact"
+                  method="post"
+                  action="/contact/thanks/"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={this.handleSubmit}
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
