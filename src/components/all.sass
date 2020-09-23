@@ -2,7 +2,7 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
+$kaldi-red: #030304
 $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
@@ -61,25 +61,28 @@ $black: #2b2523
     border-radius: .25rem
     text-decoration: none
     font-weight: 700
-    color: #CC3700
+    color: #030304
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
+    -webkit-box-shadow: inset 0 0 0 2px #030304
+    box-shadow: inset 0 0 0 2px #030304
     -webkit-transition: all .15s ease
     transition: all .15s ease
 
 .margin-top-0
   margin-top: 0 !important
 
-.navbar-item .icon
+.navbar-item
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
 .icon svg
   width: 1.5rem
   height: 1.5rem
   fill: currentColor
-.navbar-brand .navbar-item.logo
+.navbar-brand .navbar-item > span.logo
   padding: 0 1rem
+  margin: 5px
+  font-size:  800
+  border: 1px solid black
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
@@ -114,7 +117,7 @@ $menu-label-color: $white-ter
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: #d6400033;
+  background-color: black;
 .blog-list-item header
   display: flex;
   margin-bottom: 1em;
